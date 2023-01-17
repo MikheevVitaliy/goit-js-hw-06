@@ -18,7 +18,14 @@ function onFormName(event) {
 }
 
 // ====================2====================
+
+// onst refs = {
+//   inputName: document.getElementById("name-input"),
+//   spanName: document.getElementById("name-output")
+// }
+
+// refs.inputName.addEventListener("input", onFormName);
+
 // function onFormName(event) {
 //     refs.spanName.textContent = event.currentTarget.value || 'Anonymous';
-
 // };
