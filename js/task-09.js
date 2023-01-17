@@ -17,3 +17,20 @@ function getRandomHexColor() {
 //     .padStart(6, 0)}`;
 // }
 
+const refs = {
+  buttonChangeColor: document.querySelector(".change-color"),
+  body: document.querySelector("body")
+}
+console.log(refs.body);
+
+refs.buttonChangeColor.addEventListener("click", onChangeColor);
+
+function onChangeColor() {
+  function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+  }
+  
+  refs.body.style.backgroundColor = getRandomHexColor();
+}
