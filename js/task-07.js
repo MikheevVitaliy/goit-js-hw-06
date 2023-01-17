@@ -11,7 +11,7 @@ const refs = {
 
 console.dir(refs.inputFontSize);
 
-refs.inputFontSize.addEventListener("change", onFormSize);
+refs.inputFontSize.addEventListener("input", onFormSize);
 
 function onFormSize(event) {
   refs.inputFontSize.range = event.currentTarget.value;

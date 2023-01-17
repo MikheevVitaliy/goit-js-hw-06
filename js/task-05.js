@@ -14,5 +14,11 @@ function onFormName(event) {
   if (event.currentTarget.value.trim() !== "") {
     refs.spanName.textContent = event.currentTarget.value.trim();
     console.log(event.currentTarget.value.trim());
+} else {refs.spanName.textContent = 'Anonymous'}
 }
-}
+
+// ====================2====================
+// function onFormName(event) {
+//     refs.spanName.textContent = event.currentTarget.value || 'Anonymous';
+
+// };

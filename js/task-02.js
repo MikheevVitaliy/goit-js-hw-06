@@ -18,13 +18,19 @@ const ingredients = [
 
 const list = document.getElementById("ingredients");
 
-for (const ingredient of ingredients) {
+// for (const ingredient of ingredients) {
+//   const liEtem = document.createElement('li');
+//   liEtem.textContent = ingredient;
+//   liEtem.classList.add('item');
+//   list.appendChild(liEtem);
+//   console.log(liEtem);  
+// }
+
+const addIngrediensEl = ingredients.map(ingredient => {
   const liEtem = document.createElement('li');
+  liEtem.classList.add(".item");
   liEtem.textContent = ingredient;
-  liEtem.classList.add('item');
-  list.appendChild(liEtem);
-  console.log(liEtem);
-}
-
-
-
+  return liEtem;
+});
+list.append(...addIngrediensEl);
+console.log(list);
