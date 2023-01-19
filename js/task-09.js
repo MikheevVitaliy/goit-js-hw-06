@@ -18,18 +18,18 @@ function getRandomHexColor() {
 // }
 
 const refs = {
-  buttonChangeColor: document.querySelector(".change-color"),
-  body: document.querySelector("body"),
-  spanColor: document.querySelector(".color")
-}
+  buttonChangeColor: document.querySelector('.change-color'),
+  body: document.querySelector('body'),
+  spanColor: document.querySelector('.color'),
+};
 
-refs.buttonChangeColor.addEventListener("click", onChangeColor);
+refs.buttonChangeColor.addEventListener('click', onChangeColor);
 
 function onChangeColor() {
   function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+    return `#${Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, 0)}`;
   }
   refs.spanColor.textContent = getRandomHexColor();
   refs.body.style.backgroundColor = getRandomHexColor();
